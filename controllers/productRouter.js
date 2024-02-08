@@ -10,6 +10,13 @@ router.post("/add",async(req,res)=>{
         status:"success"
     })
     })
+    
+    router.get("/viewall",async(req,res)=>{
+        let data=await productModel.find()
+        res.json(data)
+    })
+    
+    
 
 
 
